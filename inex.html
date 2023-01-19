@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    spacing: {
+                        '25%': '25%',
+                        '50%': '50%',
+                        '30%': '57%',
+
+                    },
+                    colors: {
+                        'bg-color': '#114a3cfb',
+                        'bg-btn': '#175873'
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="./index.js" defer></script>
+
+    <title>Document</title>
+</head>
+
+<body class="bg-slate-400 font-mono  ">
+    <form id="form">
+        <div
+            class="max-w-3xl bg-gray-300 container mx-auto mt-25% -translate-y-50% rounded-3xl flex justify-between px-14  py-6  ">
+            <div>
+                <p>Bill:</p>
+                <input required id="sumInput" name="moneyInput"
+                    class="rounded-md flex justify-center border-none text-end  focus:outline-green-500 " type="number"
+                    placeholder="$                0 ">
+                <div class="pt-3">
+                    <p> Select tip %</p>
+                    <div class="pt-2">
+                        <div id="matches1">
+                            <span id="fife"
+                                class=" hover:bg-slate-600 active:bg-transparent active:text-black  py-1 px-6 cursor-pointer text-white rounded-md bg-bg-color">
+                                5%</span>
+                            <span id="ten"
+                                class="active:bg-transparent active:text-black  hover:bg-slate-600 py-1 px-5 text-white cursor-pointer rounded-md bg-bg-color">10%</span>
+                            <span id="fifeTen"
+                                class="active:bg-transparent active:text-black  hover:bg-slate-600 py-1 px-5 text-white rounded-md cursor-pointer bg-bg-color">15%</span>
+                        </div>
+                        <div class="mt-3" id="matches2">
+                            <span id="chorak"
+                                class="active:bg-transparent active:text-black hover:bg-slate-600  py-1 px-5 text-white rounded-md bg-bg-color cursor-pointer ">20%</span>
+                            <span id="chorak2"
+                                class="active:bg-transparent active:text-black  hover:bg-slate-600 py-1 px-5 text-white rounded-md bg-bg-color cursor-pointer ">25%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <p> Number of People </p>
+                    <input id="people" required
+                        class="rounded-md flex justify-center border-none text-end mt-1 focus:outline-green-500"
+                        type="number" placeholder="🙎‍♂️               0 ">
+                </div>
+            </div>
+            <div class="bg-bg-color w-50%  rounded-xl">
+                <div class="flex justify-between px-9 py-5">
+                    <div class="text-white">
+                        <p>Tip Amount</p>
+                        <p class="opacity-40">/person</p>
+                    </div>
+                    <span id="rezultSum" class="pr-7 text-bg-btn font-medium text-xl ">0.0 </span>
+                </div>
+                <div class="flex justify-between px-9">
+                    <div class="text-white">
+                        <p>Total</p>
+                        <p class="opacity-40">/person</p>
+                    </div>
+                    <span id="lastSum" class="pr-7 text-bg-btn font-medium text-xl">0.0 </span>
+                </div>
+                <div class="flex justify-center mt-8">
+                    <button id="btn"
+                        class=" hover:bg-slate-800 active:bg-slate-50 active:text-black active:translate-y-4   w-50% bg-bg-btn text-white font-bold text-center rounded-lg text-sm py-1 ">
+                        Reset </button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+</body>
+
+</html>
