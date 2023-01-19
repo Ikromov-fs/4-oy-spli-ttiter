@@ -86,6 +86,7 @@ __matches2.addEventListener('click', (e) => {
             __people.value = '';
         })
 
+        
     }
     else if (e.target.matches('#chorak2')) {
         console.log('25%');
